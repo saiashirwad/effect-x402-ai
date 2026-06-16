@@ -11,11 +11,11 @@ console.log("wallet:", venice.address);
 const balance = await venice.getBalance();
 console.log("balance:", balance);
 
-if (!balance.canConsume) {
-  const amount = Math.max(balance.minimumTopUpUsd ?? 1, 1);
-  console.log(`insufficient balance — topping up $${amount} USDC on Base...`);
-  await venice.topUp(amount);
-  console.log("topped up. new balance:", (await venice.getBalance()).balanceUsd);
-} else {
-  console.log("balance is spendable — ready to run `bun run start`");
-}
+// if (!balance.canConsume) {
+//   const amount = Math.max(balance.minimumTopUpUsd ?? 1, 1);
+//   console.log(`insufficient balance — topping up $${amount} USDC on Base...`);
+//   await venice.topUp(amount);
+//   console.log("topped up. new balance:", (await venice.getBalance()).balanceUsd);
+// } else {
+//   console.log("balance is spendable — ready to run `bun run start`");
+// }
